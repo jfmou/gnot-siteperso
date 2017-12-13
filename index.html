@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>Site web de Jean-François Mougnot</title>
-
+  <link rel="shortcut icon" href="http://mougnot.fr/favicon.png">
   <!-- Compiled and minified CSS for materializecss -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:100|Roboto:300" rel="stylesheet">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style media="screen">
+    :root {
+      --main-bg-color: rgba(83, 84, 84, 0.75);
+      --primary-color: rgba(94, 53, 177, 0.85);
+    }
+
     body, html {
+      color: white;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      color: white;
-
     }
 
     body {
@@ -23,18 +28,67 @@
     }
 
     header {
-          margin-bottom: 10vh;
+      margin-bottom: 10vh;
     }
 
     footer {
+      background: linear-gradient(to bottom, rgba(255,0,0,0), var(--main-bg-color));
       bottom: 0;
       position: absolute;
-      background:linear-gradient(to bottom, rgba(255,0,0,0), rgba(64, 62, 62, 0.85));
+      width: 100%;
     }
 
-    .text-wrapper {
-      background:rgba(83, 84, 84, 0.75);
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .header-title {
+      background: var(--main-bg-color);
+      display: inline-block;
+      font-family: 'Saira Semi Condensed', sans-serif;
+      line-height: initial;
+      margin: 0;
+      padding: 0 .75rem;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .row .text-wrapper {
       padding: 20px
+    }
+
+    .text-wrapper h2,
+    .text-wrapper p {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .text-wrapper h2 {
+      display: inline-block;
+      background: var(--primary-color);
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+
+    .text-wrapper p {
+      background: var(--main-bg-color);
+      font-size: 110%;
+    }
+
+    .text-wrapper h5 {
+      background-color: rgba(50, 169, 169, .75);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      display: inline-block;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .text-wrapper a {
+      margin-top: 70px;
     }
 
     .text-wrapper h2 span {
@@ -44,23 +98,26 @@
   </style>
 </head>
 <body>
-  <div>
-    <div class="row">
-      <header class="col m12">
-        <h1>Jean-François Mougnot</h1>
-      </header>
-      <div class="col m6 push-m6 text-wrapper">
-          <h2>Product Owner Technique <span>chez Radio France</span></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed velit auctor, semper erat eget, varius urna. Donec aliquam sollicitudin odio quis suscipit. Suspendisse potenti. Suspendisse luctus, sapien vitae porta lacinia, lacus quam eleifend mauris, id accumsan augue erat in urna. Mauris consectetur velit quis finibus vestibulum. </p>
-      </div>
-      <footer class="col m12">
-        <div class="center-align">
-          <a class="btn-large waves-effect waves-light btn" href="https://fr.linkedin.com/in/jfmougnot" target="_blank">Découvrir mon parcours complet</a>
-          <p >Pictures and code by me. Build on materializecss</p>
+  <div class="row">
+    <header>
+      <h1 class="header-title">Jean-François Mougnot</h1>
+    </header>
+    <div class="col m6 push-m6 text-wrapper">
+        <h2>Product Owner Technique <span>chez Radio France</span></h2>
+        <p>Depuis que j'ai rejoins la direction technique du numérique en mars 2015, je me suis investit dans l'amélioration continue de la production du plateau en participant à la mise en place de methodes, outils & techniques. <br> Tour à tour en charge de refontes partielles sur franceinfo / fip ou totales sur franceinter, responsable technique du player audio binaural, responsable technique du site franceculture.fr, scrummaster d'une équipe et product owner de l'infrastructure, j'aime le changement, la pluridisplinarité et les quotidiens variés. <br>
+        </p>
+        <h5>♥ le design thinking, la qualité, l'agile et l'a11y <br>(mais aussi 🎶 🏍️ 📷 🌐 🔬)</h5>
+        <div>
+          <a class="btn btn-large waves-effect waves-light deep-purple darken-1" href="https://fr.linkedin.com/in/jfmougnot" target="_blank" title="Découvrir mon profil complet sur LinkdeIn">Découvrir mon parcours complet</a>
         </div>
-      </footer>
     </div>
   </div>
+  <footer>
+    <div class="center-align">
+      <p>Pictures and code with ♥ by me. Build on <a href="http://materializecss.com/" target="_blank">materializecss</a>.</p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
+    </div>
+  </footer>
   <script type="text/javascript">
     var imgUrls = [
       "img/DSC_0148.JPG",
@@ -73,12 +130,19 @@
       "img/IMG_20160602_122751_3.jpg",
     ];
 
-    var backgroundSelected = _getRandomBackground(imgUrls);
-
-    document.body.style.backgroundImage =  'url(' + backgroundSelected + ')';
+    _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
 
     function _getRandomBackground(urls) {
-      return urls[Math.floor(Math.random() * urls.length)];
+      var randIdx = Math.floor(Math.random() * urls.length);
+      console.log(randIdx);
+
+      return urls[randIdx];
+    }
+
+    function _addImageAsBgOfElement(elem, imageUrl) {
+      elem.style.backgroundImage =  'url(' + imageUrl + ')';
+
+      return elem;
     }
   </script>
 </body>
