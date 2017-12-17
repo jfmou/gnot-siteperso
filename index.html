@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Site web de Jean-François Mougnot</title>
-  <link rel="shortcut icon" href="http://mougnot.fr/favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
   <!-- Compiled and minified CSS for materializecss -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:100|Roboto:300" rel="stylesheet">
@@ -32,10 +32,8 @@
     }
 
     footer {
-      background: linear-gradient(to bottom, rgba(255,0,0,0), var(--main-bg-color));
+      background: var(--main-bg-color);
       bottom: 0;
-      position: absolute;
-      width: 100%;
     }
 
     a {
@@ -46,10 +44,25 @@
     .header-title {
       background: var(--main-bg-color);
       display: inline-block;
-      font-family: 'Saira Semi Condensed', sans-serif;
+      font-family: 'Saira Semi Condensed', GillSans, Calibri, Trebuchet, sans-serif;
       line-height: initial;
       margin: 0;
       padding: 0 .75rem;
+      position: relative;
+    }
+
+    .header-title:after {
+      --triangle-height: 73px;
+      background: url('img/logo.png') -83px -96px no-repeat;
+      border:var(--triangle-height) solid;
+      border-color:  transparent transparent var(--main-bg-color) transparent;
+      content: "";
+      position: absolute;
+      height:1px;
+      right: calc(var(--triangle-height) * -1);
+      top: -80px;
+      transform: rotate(-45deg);
+      width:1px;
     }
 
     .row {
@@ -88,7 +101,7 @@
     }
 
     .text-wrapper a {
-      margin-top: 70px;
+      margin: 70px 0;
     }
 
     .text-wrapper h2 span {
@@ -111,13 +124,14 @@
           <a class="btn btn-large waves-effect waves-light deep-purple darken-1" href="https://fr.linkedin.com/in/jfmougnot" target="_blank" title="Découvrir mon profil complet sur LinkdeIn">Découvrir mon parcours complet</a>
         </div>
     </div>
+    <footer class="col m12">
+      <div class="center-align">
+        <p>Pictures and code with ♥ by me. Build on <a href="http://materializecss.com/" target="_blank">materializecss</a>.</p>
+        <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
+      </div>
+    </footer>
   </div>
-  <footer>
-    <div class="center-align">
-      <p>Pictures and code with ♥ by me. Build on <a href="http://materializecss.com/" target="_blank">materializecss</a>.</p>
-      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
-    </div>
-  </footer>
+
   <script type="text/javascript">
     var imgUrls = [
       "img/DSC_0148.JPG",
