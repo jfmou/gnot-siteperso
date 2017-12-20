@@ -13,6 +13,7 @@
     :root {
       --main-bg-color: rgba(83, 84, 84, 0.75);
       --primary-color: rgba(94, 53, 177, 0.85);
+      --secondary-color: rgba(50, 169, 169, .75);
     }
 
     body, html {
@@ -42,7 +43,7 @@
     }
 
     .header-title {
-      background: var(--main-bg-color);
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
       display: inline-block;
       font-family: 'Saira Semi Condensed', GillSans, Calibri, Trebuchet, sans-serif;
       line-height: initial;
@@ -54,9 +55,9 @@
     .header-title:after {
       --triangle-height: 73px;
       background: url('img/logo.png') -83px -96px no-repeat;
-      border:var(--triangle-height) solid;
+      border: var(--triangle-height) solid;
       border-color:  transparent transparent var(--main-bg-color) transparent;
-      content: "";
+      /* content: ""; */
       position: absolute;
       height:1px;
       right: calc(var(--triangle-height) * -1);
@@ -92,10 +93,11 @@
     }
 
     .text-wrapper h5 {
-      background-color: rgba(50, 169, 169, .75);
+      background-color: var(--secondary-color);
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px;
       display: inline-block;
+      line-height: initial;
       margin: 0;
       padding: 20px;
     }
