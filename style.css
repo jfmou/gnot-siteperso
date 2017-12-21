@@ -1,0 +1,94 @@
+:root {
+  --main-bg-color: rgba(83, 84, 84, 0.75);
+  --primary-color: rgba(94, 53, 177, 0.85);
+  --secondary-color: rgba(50, 169, 169, .75);
+}
+
+body, html {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   background: center center fixed no-repeat;
+   background-size: cover;
+}
+
+header {
+  margin-bottom: 10vh;
+}
+
+footer {
+  background: var(--main-bg-color);
+  bottom: 0;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+.header-title {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  font-family: 'Saira Semi Condensed', GillSans, Calibri, Trebuchet, sans-serif;
+  font-size: 3.8rem;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0 .75rem;
+  position: relative;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.row .text-wrapper {
+  padding: 20px
+}
+
+.text-wrapper h2,
+.text-wrapper p {
+  margin: 0;
+  padding: 20px;
+}
+
+.text-wrapper h2 {
+  display: inline-block;
+  background: var(--primary-color);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.text-wrapper p {
+  background: var(--main-bg-color);
+  font-size: 110%;
+}
+
+.text-wrapper h5 {
+  background-color: var(--secondary-color);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  display: inline-block;
+  line-height: initial;
+  margin: 0;
+  padding: 20px;
+}
+
+.text-wrapper a {
+  margin: 70px 0;
+}
+
+.text-wrapper h2 span {
+  display: block;
+  font-size: 75%;
+}
+/* Only  */
+@media only screen and (min-width: 993px) {
+  .header-title {
+    display: inline-block;
+    font-size: 4.2rem;
+    line-height: initial;
+  }
+}
