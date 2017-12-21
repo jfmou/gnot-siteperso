@@ -2,27 +2,76 @@
   --main-bg-color: rgba(83, 84, 84, 0.75);
   --primary-color: rgba(94, 53, 177, 0.85);
   --secondary-color: rgba(50, 169, 169, .75);
+  --vertical-spacing: 10vh;
 }
 
-body, html {
+/* layout */
+* {
+  box-sizing: border-box;
+}
+html, body {
   color: white;
+  display: flex; flex-direction: column;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-body {
-   background: center center fixed no-repeat;
-   background-size: cover;
+html {
+  line-height: 1.5;
+  font-weight: normal;
 }
 
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 14.5px;
+  }
+}
+
+@media only screen and (min-width: 0) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background: center center fixed no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+}
+
+@media only screen and (min-width: 993px) {
+  .text-wrapper {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+/* decoration */
 header {
-  margin-bottom: 10vh;
+  margin-bottom: var(--vertical-spacing);
+}
+
+h1, h2, h5 {
+  font-weight: 400;
 }
 
 footer {
   background: var(--main-bg-color);
   bottom: 0;
+  text-align: center;
 }
 
 a {
@@ -38,14 +87,11 @@ a {
   margin: 0;
   padding: 0 .75rem;
   position: relative;
+  text-align: center;
 }
 
-.row {
-  margin-bottom: 0;
-}
-
-.row .text-wrapper {
-  padding: 20px
+.text-wrapper {
+  padding: 0 20px
 }
 
 .text-wrapper h2,
@@ -59,11 +105,13 @@ a {
   background: var(--primary-color);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  font-size: 3rem;
+  line-height: 110%;
 }
 
 .text-wrapper p {
   background: var(--main-bg-color);
-  font-size: 110%;
+  font-size: 1.3rem;
 }
 
 .text-wrapper h5 {
@@ -71,24 +119,57 @@ a {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   display: inline-block;
+  font-size: 1.64rem;
   line-height: initial;
   margin: 0;
   padding: 20px;
-}
-
-.text-wrapper a {
-  margin: 70px 0;
 }
 
 .text-wrapper h2 span {
   display: block;
   font-size: 75%;
 }
-/* Only  */
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  height: 54px;
+  line-height: 54px;
+  letter-spacing: .5px;
+  margin: var(--vertical-spacing) 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  transition: .3s ease-out;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media only screen and (min-width: 993px) {
   .header-title {
     display: inline-block;
     font-size: 4.2rem;
     line-height: initial;
+    text-align: initial;
+  }
+
+  .btn-wrapper {
+    text-align: initial;
   }
 }
