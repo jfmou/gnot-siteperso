@@ -41,8 +41,6 @@
       "img/IMG_20160602_122751_3.jpg",
     ];
 
-    _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
-
     function _getRandomBackground(urls) {
       var randIdx = Math.floor(Math.random() * urls.length);
       console.log(randIdx);
@@ -55,6 +53,11 @@
 
       return elem;
     }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
+    });
   </script>
 </body>
 </html>
