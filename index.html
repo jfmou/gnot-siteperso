@@ -57,6 +57,17 @@
 
     document.addEventListener("DOMContentLoaded", function() {
       _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
+
+      var httpRequest = new XMLHttpRequest();
+
+      httpRequest.onreadystatechange = function() {
+        if(httpRequest.readyState === XMLHttpRequest.DONE && httpRequest.status === 200) {
+           console.log(httpRequest.responseText);
+         }
+      };
+
+      httpRequest.open('GET', 'https://api.discogs.com//users/jfmou/collection/folders/0/releases/');
+      httpRequest.send();
     });
   </script>
 </body>
