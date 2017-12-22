@@ -29,7 +29,7 @@
     </header>
     <div class="text-wrapper">
         <h2>Product Owner <span>chez Radio France</span></h2>
-        <p>Depuis que j'ai rejoins la direction technique du numérique en mars 2015, je me suis investit dans l'amélioration continue de la production du plateau en participant à la mise en place de methodes, outils & techniques. <br> Tour à tour en charge de refontes partielles sur franceinfo / fip ou totales sur franceinter, responsable technique du player audio binaural, responsable technique du site franceculture.fr, scrummaster d'une équipe et product owner de l'infrastructure, j'aime le changement, la pluridisplinarité et les quotidiens variés. <br>
+        <p>Depuis que j'ai rejoins la direction technique du numérique en mars 2015, je me suis investi dans l'amélioration continue de la production du plateau en participant à la mise en place de methodes, outils & techniques. <br> Tour à tour en charge de refontes partielles sur franceinfo / fip ou totales sur franceinter, responsable technique du player audio binaural, responsable technique du site franceculture.fr, scrummaster d'une équipe et product owner de l'infrastructure, j'aime le changement, la pluridisplinarité et les quotidiens variés. <br>
         </p>
         <h5>💓 le design thinking, la qualité, l'agile et l'a11y <br>(mais aussi 🎶 🏍️ 📷 🌐 🔬)</h5>
         <div class="btn-wrapper">
