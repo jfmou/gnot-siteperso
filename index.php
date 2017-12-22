@@ -9,13 +9,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<meta name="keywords" content="site personnel jean-francois mougnot photo web moto product owner agile qualité accessibilité radiofrance fip franceinter francebleu scrum coach agile design thinikg html css webdesign gephi graph utc gestion de projet sémantique expérience utilisateur scénarisation brief">
 	<meta name="author" content="Jean-françois MOUGNOT">
-	<meta name="description" content="Mon espace personnel : concepteur web passionné diplômé de l'UTC, vous trouverez ici un echantillon de mes photos ainsi qu'un lien vers mon profile linked. Découvrez-moi !">
+	<meta name="description" content="Mon espace personnel : concepteur web passionné diplômé de l'UTC, vous trouverez ici un echantillon de mes photos ♥ ainsi qu'un lien vers mon profile LinkedIn. Découvrez-moi !">
 	<!-- Facebook OpenGraph Data -->
-        <meta property="og:title" content="UX Designer &amp; chef de projet | Jean-François Mougnot">
-        <meta property="og:type" content="website">
-    <meta property="og:url" content="http://mougnot.fr/">
-    <meta property="og:description" content="Mon espace personnel : concepteur web passionné, diplômé de l'Université de Technologie de Compiègne, vous trouverez ici un bon nombre d'informations sur moi. Découvrez-moi !">
-	<meta property="og:image" content="http://mougnot.fr/images/moi.jpg">
+  <meta property="og:title" content="UX Designer &amp; Project Owner | Jean-François Mougnot">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://mougnot.fr/">
+  <meta property="og:description" content="Mon espace personnel : concepteur web passionné diplômé de l'UTC, vous trouverez ici un echantillon de mes photos ♥ ainsi qu'un lien vers mon profile LinkedIn. Découvrez-moi !">
+	<meta property="og:image" content="http://mougnot.fr/me.jpg">
   <link rel="shortcut icon" href="favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:100|Roboto:300" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
