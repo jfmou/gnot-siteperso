@@ -43,49 +43,21 @@
   </div>
 
   <script type="text/javascript">
-  <?php
-    $dir = 'img/';
-    $files = array_diff(scandir($dir), array('..', '.', '.DS_Store'));
-
-    foreach ($files as $key => $link) {
-        if(is_dir($dir.$link)){
-            unset($files[$key]);
-        }
-    }
-
-    function array_addstuff($a, $i) {
-        foreach ($a as &$e)
-            $e = $i . $e;
-        return $a;
-    }
-
-    $files = array_addstuff($files, $dir);
-
-    echo('var imgUrls=' . json_encode($files) . ';');
-  ?>
-
-    function _getRandomBackground(urls) {
-      var randIdx;
-      var count = 0;
-
-      for (var prop in urls) {
-        if (Math.random() < 1/++count) {
-          randIdx = prop;
-        }
-      }
-
-      return urls[randIdx];
-    }
-
-    function _addImageAsBgOfElement(elem, imageUrl) {
-      elem.style.backgroundImage =  'url(' + imageUrl + ')';
-
-      return elem;
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
-    });
+  <?php require_once __DIR__ . '/parseFolder.php'; ?>
   </script>
+  <script type="text/javascript" src='main.js'></script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27329355-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
