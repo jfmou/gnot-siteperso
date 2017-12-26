@@ -13,9 +13,9 @@
 	<!-- Facebook OpenGraph Data -->
   <meta property="og:title" content="UX Designer &amp; Project Owner | Jean-François Mougnot">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://mougnot.fr/">
+  <meta property="og:url" content="https://www.mougnot.fr/">
   <meta property="og:description" content="Mon espace personnel : concepteur web passionné diplômé de l'UTC, vous trouverez ici un echantillon de mes photos ♥ ainsi qu'un lien vers mon profile LinkedIn. Découvrez-moi !">
-	<meta property="og:image" content="http://mougnot.fr/me.jpg">
+	<meta property="og:image" content="https://www.mougnot.fr/me.jpg">
   <link rel="shortcut icon" href="favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:100|Roboto:300" rel="stylesheet">
   <link rel="stylesheet" href="style.css">

@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  background: center center fixed no-repeat;
+  background: center center fixed no-repeat var(--main-bg-color);
   background-size: cover;
 }
 
