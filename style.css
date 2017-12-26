@@ -3,6 +3,7 @@
   --primary-color: rgba(94, 53, 177, 0.85);
   --secondary-color: rgba(50, 169, 169, .75);
   --vertical-spacing: 10vh;
+  --default-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 /* layout */
@@ -79,6 +80,16 @@ a {
   text-decoration: underline;
 }
 
+button {
+  background: #333;
+  border: 0 none;
+  border-radius: 2px;
+  box-shadow: var(--default-box-shadow);
+  color: #e8e4e4;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
 .header-title {
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   font-family: 'Saira Semi Condensed', GillSans, Calibri, Trebuchet, sans-serif;
@@ -138,7 +149,7 @@ a {
   background-color: var(--primary-color);
   border: none;
   border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: var(--default-box-shadow);
   color: #fff;
   cursor: pointer;
   display: inline-block;
