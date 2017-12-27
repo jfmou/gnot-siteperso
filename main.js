@@ -21,7 +21,7 @@ backgroundHandler.prototype._getRandomBackground = function(urls) {
 
     return picture;
   } else {
-    return _getRandomBackground(urls);
+    return this._getRandomBackground(urls);
   }
 };
 
@@ -33,11 +33,15 @@ backgroundHandler.prototype._addImageAsBgOfElement = function(elem, imageUrl) {
 
 var backgrounds = new backgroundHandler();
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls));
 });
 
-document.addEventListener("keydown", function(e) {
+document.getElementById('change-pic').addEventListener('click', function() {
+  backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls));
+});
+
+document.addEventListener('keydown', function(e) {
   if (e.keyCode == 39 && (Object.keys(imgUrls).length > backgrounds.picturesHistory.length)) {
     backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls));
   }
