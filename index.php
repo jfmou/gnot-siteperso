@@ -37,7 +37,7 @@
         </div>
     </div>
     <footer>
-      <p><button title="Changer de photo" onclick="_addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls))">Changer de photo (→)</button> </p>
+      <p><button title="Changer de photo" onclick="backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls))">Changer de photo (→)</button> </p>
       <p>Pictures and code with ♥ by me.</p>
       <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Accéder à la licence Creative Commons"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
     </footer>

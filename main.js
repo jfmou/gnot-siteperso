@@ -1,41 +1,44 @@
 'use strict';
 
-var picturesHistory = [];
+var backgroundHandler = function() {
+  var temp_keyImgUrl;
 
-function _getRandomBackground(urls) {
-  var randIdx,
-      count = 0,
-      picture;
+  this.picturesHistory = [],
+  this.keysImgUrl = [];
 
-  for (var prop in urls) {
-    if (Math.random() < 1/++count) {
-      randIdx = prop;
+  for (temp_keyImgUrl in imgUrls) {
+    if(imgUrls.hasOwnProperty(temp_keyImgUrl)) {
+       this.keysImgUrl.push(temp_keyImgUrl);
     }
   }
+}
 
-  picture = urls[randIdx];
+backgroundHandler.prototype._getRandomBackground = function(urls) {
+  var picture = urls[this.keysImgUrl[Math.floor(Math.random() * this.keysImgUrl.length)]];
 
-  if (!picturesHistory.includes(picture)) { // to avoid doublons since we randomize picture order
-    picturesHistory.push(picture);
+  if (!this.picturesHistory.includes(picture)) { // to avoid doublons since we randomly get pictures
+    this.picturesHistory.push(picture);
 
     return picture;
   } else {
     return _getRandomBackground(urls);
   }
-}
+};
 
-function _addImageAsBgOfElement(elem, imageUrl) {
+backgroundHandler.prototype._addImageAsBgOfElement = function(elem, imageUrl) {
   elem.style.backgroundImage =  'url(' + imageUrl + ')';
 
   return elem;
-}
+};
+
+var backgrounds = new backgroundHandler();
 
 document.addEventListener("DOMContentLoaded", function() {
-  _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
+  backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls));
 });
 
 document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 39 && (Object.keys(imgUrls).length > picturesHistory.length)) {
-    _addImageAsBgOfElement(document.body, _getRandomBackground(imgUrls));
+  if (e.keyCode == 39 && (Object.keys(imgUrls).length > backgrounds.picturesHistory.length)) {
+    backgrounds._addImageAsBgOfElement(document.body, backgrounds._getRandomBackground(imgUrls));
   }
 });
